@@ -5,21 +5,36 @@
     box-sizing: border-box;
 }
 
+/* Global styles */
 html {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
 
+/* Shared styles for sections */
+section .content {
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
 h1 {
-    margin: 0; /* Reset margin to avoid extra space */
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     padding-bottom: .45em;
 }
 
 h3 {
-    margin: 0;
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     color: #006a92;
 }
 
@@ -35,7 +50,7 @@ header {
 header .content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between logo and navigation. */
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -69,20 +84,47 @@ nav a:hover {
 .mission {
     display: flex;
     height: 300px;
-    background-image: url(../img/background-img1.jpg);
-    background-image: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background: url(../img/background-img1.jpg) no-repeat fixed center;
 }
 
-.mission .content {
+/* Portfolio */
+#portfolio {
+    min-height: 200px;
     margin: auto;
-    background-color: white;
-    width: 100%;
-    display: flex; /* Added */
-    flex-direction: column; /* Stacking child elements vertically */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 1em;
+    padding: 100px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+.companies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.company {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.company img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    max-height: 200px;
+    display: block;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+
+span {
+    font-weight: bold;
+}
